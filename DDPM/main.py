@@ -74,8 +74,7 @@ if __name__ == "__main__":
     net = build_network(config, n_steps)
     ddpm = DDPM(device, n_steps)
 
-    # train(ddpm, net, device, path)
-
+    train(ddpm, net, device, path)
 
     net.load_state_dict(torch.load(model_path))
     sample_imgs(ddpm, net, '/home/siat502/siat_cxd/DL_Demos/DDPM/diffusion.jpg', device=device)
